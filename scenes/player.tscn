@@ -8,3 +8,15 @@ script = ExtResource("1_f74f6")
 
 [node name="PlayerImage" type="Sprite2D" parent="."]
 texture = ExtResource("1_i0qqw")
+
+[node name="PlayerImage2" type="Sprite2D" parent="."]
+position = Vector2(308, 279)
+texture = ExtResource("1_i0qqw")
+
+[node name="PlayerImage3" type="Sprite2D" parent="."]
+position = Vector2(170, 161)
+texture = ExtResource("1_i0qqw")
+
+[node name="PlayerImage4" type="Sprite2D" parent="."]
+position = Vector2(-1, 228)
+texture = ExtResource("1_i0qqw")

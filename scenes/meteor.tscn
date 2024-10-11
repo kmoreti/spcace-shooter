@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c42y5jcc1ws7t"]
 
-[ext_resource type="Texture2D" uid="uid://blycc6d2pon3f" path="res://meteors/1.png" id="1_rwih8"]
+[ext_resource type="Texture2D" uid="uid://blycc6d2pon3f" path="res://graphics/meteors/1.png" id="1_rwih8"]
 
 [node name="Meteor" type="Node2D"]
 
