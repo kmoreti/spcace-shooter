@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cfwvuincmq6xy"]
+[gd_scene load_steps=23 format=3 uid="uid://cfwvuincmq6xy"]
 
 [ext_resource type="PackedScene" uid="uid://bc3cxv8ewfoa4" path="res://scenes/player.tscn" id="1_b2oeu"]
 [ext_resource type="Texture2D" uid="uid://jc4jp08rpfd0" path="res://graphics/backgrounds/stars.png" id="1_cnh43"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://6p6n8r67tdcr" path="res://graphics/explosions/explosion13.png" id="16_hyvq4"]
 [ext_resource type="Texture2D" uid="uid://birgqddsb0mj7" path="res://graphics/explosions/explosion14.png" id="17_8xwnv"]
 [ext_resource type="Texture2D" uid="uid://cna6mj8h1gfep" path="res://graphics/explosions/explosion15.png" id="18_xffna"]
+[ext_resource type="PackedScene" uid="uid://c2vwnka31nnyu" path="res://scenes/ui.tscn" id="19_tkjcd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b05bs"]
 animations = [{
@@ -85,12 +86,14 @@ script = ExtResource("1_jrnyr")
 position = Vector2(640, 365)
 scale = Vector2(0.646777, 0.37207)
 texture = ExtResource("1_cnh43")
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("1_b2oeu")]
-position = Vector2(691, 364)
+position = Vector2(818, 471)
 scale = Vector2(0.7, 0.7)
 
 [node name="Stars" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stars"]
 scale = Vector2(0.05, 0.05)
@@ -165,6 +168,7 @@ autoplay = "default"
 frame_progress = 0.878573
 
 [node name="Borders" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
 collision_layer = 4
@@ -199,8 +203,12 @@ wait_time = 0.2
 autostart = true
 
 [node name="Meteors" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Lasers" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="UI" parent="." instance=ExtResource("19_tkjcd")]
 
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
